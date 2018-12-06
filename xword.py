@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """Crossword Solver Program"""
 
-__author__ = "???"
+__author__ = "bomazani"
 
 # YOUR HELPER FUNCTION GOES HERE
 
