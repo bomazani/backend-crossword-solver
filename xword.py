@@ -4,18 +4,29 @@
 
 __author__ = "bomazani"
 
-# YOUR HELPER FUNCTION GOES HERE
+import re
+
+
+def find_options(words, test_word):
+    """ search dict for matching words """
+    options = []
+    reg_word = test_word.replace(' ', '.')
+    for word in words:
+        if len(test_word) == len(word) and re.match(reg_word, word):
+            options.append(word)
+    return options
 
 
 def main():
+    """ take user input, find matches in dictionary """
     with open('dictionary.txt') as f:
         words = f.read().split()
 
     test_word = raw_input(
-        'Please enter a word to solve.\nUse spaces to signify unknown letters: ').lower()
+        'Please enter a word to solve.\n'
+        'Use spaces to signify unknown letters: ').lower()
 
-    # YOUR ADDITIONAL CODE HERE
-    raise NotImplementedError('Please complete this')
+    print("\n".join(find_options(words, test_word)))
 
 
 if __name__ == '__main__':
