@@ -8,7 +8,7 @@ import re
 
 
 def find_options(words, test_word):
-    """ search dict for matching words """
+    """ Search dict for matching words. """
     options = []
     reg_word = test_word.replace(' ', '.')
     for word in words:
@@ -18,7 +18,7 @@ def find_options(words, test_word):
 
 
 def main():
-    """ take user input, find matches in dictionary """
+    """ Take user input, find matches in dictionary. """
     with open('dictionary.txt') as f:
         words = f.read().split()
 
